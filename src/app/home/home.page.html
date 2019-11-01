@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <p class="ion-text-center">
+        <img src="../../assets/icon.png" width="20%">
+      </p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text>
+    <p class="ion-text-center">Sign In</p>
+  </ion-text>
+  <form method="post">
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" name="username"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" name="password"></ion-input>
+    </ion-item>
+  
+    <p class="ion-text-right">Forgot Password?</p>
+  
+    <ion-button type="submit" expand="full" color="primary" routerLink="/calculator" routerDirection="root">Login</ion-button>
+  </form>
+  <p class="ion-text-center">Don't have a account?</p>
+  <ion-button expand="full" color="danger">Register</ion-button>
+</ion-content>

@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2"><ion-button color="light" routerLink="/home" routerDirection="root"><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-button></ion-col>
+        <ion-col size="10"><ion-title>Calculator</ion-title></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">{{preVal}}</ion-label>
+    <ion-input placeholder="0" readonly="true" color="primary" size="large" value="{{val}}"></ion-input>
+  </ion-item>
+  <ion-grid class="no-padding">
+    <ion-row>
+      <ion-col size="6">
+        <ion-button color="danger" expand="full" size="large" (click)="clear()">C</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" expand="full" size="large" (click)="rem()"><ion-icon name="arrow-round-back"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="full" size="large" (click)="div()">/</ion-button>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="seven()">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="eight()">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="nine()">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="full" size="large" (click)="mul()">*</ion-button>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="four()">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="five()">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="six()">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="full" size="large" (click)="sub()">-</ion-button>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="one()">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="two()">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="three()">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning" expand="full" size="large" (click)="add()">+</ion-button>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="zero()">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="full" size="large" (click)="comma()">,</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button color="success" expand="full" size="large" (click)="result()">=</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

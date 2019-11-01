@@ -1,0 +1,22 @@
+ion-input {
+    text-align: right;
+    ::-webkit-input-placeholder {
+        text-align: right;
+    }
+}
+
+ion-grid {
+    padding: 0;
+    
+    & > ion-row {
+        padding: 0;
+
+        & > ion-col {
+            padding: 0;
+
+            & > ion-button {
+                padding: 0;
+            }
+        }
+    }
+}
