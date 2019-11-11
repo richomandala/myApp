@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-bangundatar',
@@ -9,8 +10,11 @@ import { Router } from '@angular/router';
 export class BangundatarPage implements OnInit {
 
   constructor(
-    public router : Router
-  ) {}
+    public router : Router,
+    public menuCtrl: MenuController
+  ) {
+    this.menuCtrl.enable(false, "menu");
+  }
 
   ngOnInit() {
   }

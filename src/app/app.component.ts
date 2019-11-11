@@ -10,11 +10,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  navigate : any;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
+    this.sideMenu();
     this.initializeApp();
   }
 
@@ -23,5 +25,48 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  sideMenu()
+  {
+    this.navigate =
+    [
+      {
+        title : "Home",
+        url   : "/bangundatar"
+      },
+      {
+        title : "Persegi",
+        url   : "/persegi"
+      },
+      {
+        title : "Persegi Panjang",
+        url   : "/persegipanjang"
+      },
+      {
+        title : "Segitiga",
+        url   : "/segitiga"
+      },
+      {
+        title : "Lingkaran",
+        url   : "/lingkaran"
+      },
+      {
+        title : "Jajar Genjang",
+        url   : "/jajargenjang"
+      },
+      {
+        title : "Belah Ketupat",
+        url   : "/belahketupat"
+      },
+      {
+        title : "Layang-layang",
+        url   : "/layanglayang"
+      },
+      {
+        title : "Trapesium",
+        url   : "/trapesium"
+      },
+    ]
   }
 }

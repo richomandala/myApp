@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { ToastController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +11,11 @@ export class HomePage {
 
   constructor(
     public router : Router,
-    public toastController: ToastController
-  ) {}
+    public toastController: ToastController,
+    public menuCtrl: MenuController
+  ) {
+    this.menuCtrl.enable(false, "menu");
+  }
 
   ngOnInit() {
   }
