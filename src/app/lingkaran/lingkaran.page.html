@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Lingkaran</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <div class="ion-text-center">
+      <img src="../../assets/lingkaran_layout.png" width="150" />
+    </div>
+    <ion-text>
+      <h2><strong>Rumus</strong></h2>
+    </ion-text>
+    <ion-item color="medium">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            Luas
+          </ion-col>
+          <ion-col>
+            π * r * r
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item color="medium">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            Keliling
+          </ion-col>
+          <ion-col>
+            2 * π * r
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item color="medium">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+          </ion-col>
+          <ion-col>
+            π (pi) = 3.14159265359
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    
+    <br>
+  
+    <ion-text>
+      <h2><strong>Kalkulator</strong></h2>
+    </ion-text>
+    <ion-item>
+      <ion-label position="stacked">Masukkan Jari-jari (r)</ion-label>
+      <ion-input inputmode="numeric" (ionChange)="hitung()" [(ngModel)]="r" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+    </ion-item>
+    <ion-item color="medium">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            Luas
+          </ion-col>
+          <ion-col>
+            {{luas}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item color="medium">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            Keliling
+          </ion-col>
+          <ion-col>
+            {{keliling}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-content>
+  

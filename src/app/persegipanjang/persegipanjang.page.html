@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Persegi Panjang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-center">
+    <img src="../../assets/persegipanjang_layout.png" width="150" />
+  </div>
+  <ion-text>
+    <h2><strong>Rumus</strong></h2>
+  </ion-text>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Luas
+        </ion-col>
+        <ion-col>
+          p * l
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Keliling
+        </ion-col>
+        <ion-col>
+          2 * (p + l)
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  
+  <br>
+
+  <ion-text>
+    <h2><strong>Kalkulator</strong></h2>
+  </ion-text>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Panjang (p)</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitung()" [(ngModel)]="p" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Lebar (l)</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitung()" [(ngModel)]="l" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Luas
+        </ion-col>
+        <ion-col>
+          {{luas}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Keliling
+        </ion-col>
+        <ion-col>
+          {{keliling}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Jajar Genjang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-center">
+    <img src="../../assets/jajargenjang_layout.png" width="150" />
+  </div>
+  <ion-text>
+    <h2><strong>Rumus</strong></h2>
+  </ion-text>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Luas
+        </ion-col>
+        <ion-col>
+          a * t
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Keliling
+        </ion-col>
+        <ion-col>
+          AB + BC + CD + DA
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  
+  <br>
+
+  <ion-text>
+    <h2><strong>Kalkulator</strong></h2>
+  </ion-text>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Alas (a)</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungluas()" [(ngModel)]="a" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Tinggi (t)</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungluas()" [(ngModel)]="t" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Sisi AB</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungkeliling()" [(ngModel)]="ab" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Sisi BC</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungkeliling()" [(ngModel)]="bc" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Sisi CD</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungkeliling()" [(ngModel)]="cd" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Sisi DA</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungkeliling()" [(ngModel)]="da" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Luas
+        </ion-col>
+        <ion-col>
+          {{luas}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Keliling
+        </ion-col>
+        <ion-col>
+          {{keliling}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Layang-layang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-center">
+    <img src="../../assets/layanglayang_layout.png" width="150" />
+  </div>
+  <ion-text>
+    <h2><strong>Rumus</strong></h2>
+  </ion-text>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Luas
+        </ion-col>
+        <ion-col>
+          d1 * d2 / 2
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Keliling
+        </ion-col>
+        <ion-col>
+          2 (DA + AB)
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  
+  <br>
+
+  <ion-text>
+    <h2><strong>Kalkulator</strong></h2>
+  </ion-text>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Diagonal 1 (d1)</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungluas()" [(ngModel)]="d1" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Diagonal 2 (d2)</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungluas()" [(ngModel)]="d2" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Panjang DA</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungkeliling()" [(ngModel)]="da" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Masukkan Panjang AB</ion-label>
+    <ion-input inputmode="numeric" (ionChange)="hitungkeliling()" [(ngModel)]="ab" [ngModelOptions]="{standalone: true}" placeholder="0"></ion-input>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Luas
+        </ion-col>
+        <ion-col>
+          {{luas}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          Keliling
+        </ion-col>
+        <ion-col>
+          {{keliling}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-content>

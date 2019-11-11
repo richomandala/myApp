@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,41 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    public router : Router,
+    public toastController: ToastController
+  ) {}
+
+  ngOnInit() {
+  }
+
+  username: string;
+  password: string;
+  msg: string;
+  color: string;
+
+  async notif() {
+    const toast = await this.toastController.create({
+      message: this.msg,
+      color: this.color,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  login() {
+    
+    if (this.username == "richo" && this.password == "richo212") {
+      this.msg = "Login Sukses.";
+      this.color = "success";
+      this.notif();
+      this.router.navigate(['./bangundatar']);
+    }
+    else {
+      this.msg = "Username atau Password Salah.";
+      this.color = "danger";
+      this.notif();
+    }
+  }
 
 }
