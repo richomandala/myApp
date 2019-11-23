@@ -14,14 +14,15 @@ export class HomePage {
     public toastController: ToastController,
     public menuCtrl: MenuController
   ) {
-    this.menuCtrl.enable(false, "menu");
+    this.menuCtrl.enable(false, "menu")
+    this.menuCtrl.swipeGesture(false, "menu");
   }
 
   ngOnInit() {
   }
 
-  username: string;
-  password: string;
+  username: string = "";
+  password: string = "";
   msg: string;
   color: string;
 
@@ -36,11 +37,33 @@ export class HomePage {
 
   login() {
     
-    if (this.username == "richo" && this.password == "richo212") {
+    if (this.username == "bangundatar" && this.password == "richo212") {
       this.msg = "Login Sukses.";
       this.color = "success";
       this.notif();
-      this.router.navigate(['./bangundatar']);
+      setTimeout(function(){location.href="./bangundatar"},2100);
+    }
+    else if (this.username == "calculator" && this.password == "richo212") {
+      this.msg = "Login Sukses.";
+      this.color = "success";
+      this.notif();
+      setTimeout(function(){location.href="./calculator"},2100);
+    }
+    else if (this.username == "latihan" && this.password == "richo212") {
+      this.msg = "Login Sukses.";
+      this.color = "success";
+      this.notif();
+      setTimeout(function(){location.href="./latihanpage"},2100);
+    }
+    else if (this.username == "" && this.password == "") {
+      this.msg = "Username & Password Wajib Diisi.";
+      this.color = "warning";
+      this.notif();
+    }
+    else if (this.username == "" || this.password == "") {
+      this.msg = "Username & Password Wajib Diisi.";
+      this.color = "warning";
+      this.notif();
     }
     else {
       this.msg = "Username atau Password Salah.";

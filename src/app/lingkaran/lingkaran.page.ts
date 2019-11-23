@@ -12,6 +12,7 @@ export class LingkaranPage implements OnInit {
     public menuCtrl: MenuController
   ) {
     this.menuCtrl.enable(true, "menu");
+    this.menuCtrl.swipeGesture(true, "menu");
   }
 
   ngOnInit() {
@@ -24,6 +25,12 @@ export class LingkaranPage implements OnInit {
   hitung() {
     this.luas = (3.14159265359 * parseInt(this.r) * parseInt(this.r)).toFixed(2);
     this.keliling = (2 * 3.14159265359 * parseInt(this.r)).toFixed(2);
+    if (this.luas == "NaN") {
+      this.luas = "0.00";
+    }
+    if (this.keliling == "NaN") {
+      this.keliling = "0.00";
+    }
   }
 
 }

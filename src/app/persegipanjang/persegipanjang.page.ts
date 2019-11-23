@@ -12,6 +12,7 @@ export class PersegipanjangPage implements OnInit {
     public menuCtrl: MenuController
   ) {
     this.menuCtrl.enable(true, "menu");
+    this.menuCtrl.swipeGesture(true, "menu");
   }
 
   ngOnInit() {
@@ -25,6 +26,12 @@ export class PersegipanjangPage implements OnInit {
   hitung() {
     this.luas = (parseInt(this.p) * parseInt(this.l)).toFixed(2);
     this.keliling = (2 * (parseInt(this.p) + parseInt(this.l))).toFixed(2);
+    if (this.luas == "NaN") {
+      this.luas = "0.00";
+    }
+    if (this.keliling == "NaN") {
+      this.keliling = "0.00";
+    }
   }
 
 }

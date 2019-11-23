@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-calculator',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router,
+    public toastController: ToastController
+  ) { }
 
   ngOnInit() {
   }
@@ -15,6 +20,24 @@ export class CalculatorPage implements OnInit {
   preVal = "";
   val = "0";
   newVal = "0";
+  msg: string;
+  color: string;
+
+  async notif() {
+    const toast = await this.toastController.create({
+      message: this.msg,
+      color: this.color,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  logout() {
+    this.msg = "Logout Sukses.";
+    this.color = "success";
+    this.notif();
+    this.router.navigate(['./home']);
+  }
 
   zero() {
     if (parseInt(this.val) > 0 || this.val.search(".") > 0) {

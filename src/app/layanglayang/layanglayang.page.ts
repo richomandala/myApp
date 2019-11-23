@@ -12,6 +12,7 @@ export class LayanglayangPage implements OnInit {
     public menuCtrl: MenuController
   ) {
     this.menuCtrl.enable(true, "menu");
+    this.menuCtrl.swipeGesture(true, "menu");
   }
 
   ngOnInit() {
@@ -26,10 +27,16 @@ export class LayanglayangPage implements OnInit {
 
   hitungluas() {
     this.luas = (parseInt(this.d1) * parseInt(this.d2) / 2).toFixed(2);
+    if (this.luas == "NaN") {
+      this.luas = "0.00";
+    }
   }
 
   hitungkeliling() {
     this.keliling = (2 * (parseInt(this.da) + parseInt(this.ab))).toFixed(2);
+    if (this.keliling == "NaN") {
+      this.keliling = "0.00";
+    }
   }
 
 }

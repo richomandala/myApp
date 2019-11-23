@@ -12,6 +12,7 @@ export class PersegiPage implements OnInit {
     public menuCtrl: MenuController
   ) {
     this.menuCtrl.enable(true, "menu");
+    this.menuCtrl.swipeGesture(true, "menu");
   }
 
   ngOnInit() {
@@ -24,6 +25,12 @@ export class PersegiPage implements OnInit {
   hitung() {
     this.luas = (parseInt(this.s) * parseInt(this.s)).toFixed(2);
     this.keliling = (parseInt(this.s) * 4).toFixed(2);
+    if (this.luas == "NaN") {
+      this.luas = "0.00";
+    }
+    if (this.keliling == "NaN") {
+      this.keliling = "0.00";
+    }
   }
 
 }

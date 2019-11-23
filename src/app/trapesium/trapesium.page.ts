@@ -12,6 +12,7 @@ export class TrapesiumPage implements OnInit {
     public menuCtrl: MenuController
   ) {
     this.menuCtrl.enable(true, "menu");
+    this.menuCtrl.swipeGesture(true, "menu");
   }
 
   ngOnInit() {
@@ -27,10 +28,16 @@ export class TrapesiumPage implements OnInit {
   
   hitungluas() {
     this.luas = ((parseInt(this.ab) + parseInt(this.cd)) * parseInt(this.t) / 2).toFixed(2);
+    if (this.luas == "NaN") {
+      this.luas = "0.00";
+    }
   }
 
   hitungkeliling() {
     this.keliling = (parseInt(this.ab) + parseInt(this.bc) + parseInt(this.cd) + parseInt(this.da)).toFixed(2);
+    if (this.keliling == "NaN") {
+      this.keliling = "0.00";
+    }
   }
 
 }

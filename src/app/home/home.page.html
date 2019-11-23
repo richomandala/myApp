@@ -15,12 +15,12 @@
   <form method="post">
     <ion-item>
       <ion-label position="floating">Username</ion-label>
-      <ion-input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"></ion-input>
+      <ion-input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" required></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"></ion-input>
+      <ion-input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required></ion-input>
     </ion-item>
   
     <p class="ion-text-right">Forgot Password?</p>
